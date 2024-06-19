@@ -77,7 +77,7 @@ class CombinedDataLoader(tf.keras.utils.Sequence):
 # 4. Định nghĩa API
 @app.route('/')
 def home():
-    return 'home'
+    return ''
 
 @app.route('/predict', methods=['GET'])
 def predict():
@@ -139,5 +139,4 @@ def predict():
         return jsonify({'error': error_message}), 500
 
 if __name__ == '__main__':
-
     app.run(host='0.0.0.0',debug=True)  
